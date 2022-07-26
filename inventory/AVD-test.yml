@@ -1,0 +1,58 @@
+---
+all:
+  children:
+    CVP:
+      hosts:
+        cv_ztp:
+          ansible_host: 10.255.12.27
+          ansible_user: root
+          ansible_password: cvproot
+        cv_server:
+          ansible_httpapi_host: 10.255.12.27
+          ansible_host: 10.255.12.27
+          ansible_user: cvpadmin
+          ansible_password: cvp123!
+    VEOS:
+      hosts:
+        DC1-L2LEAF1A:
+          ansible_host: 10.255.4.94
+          ansible_user: cvpadmin
+          ansible_ssh_pass: cvp123!
+        DC1-L2LEAF2A:
+          ansible_host: 10.255.84.35
+          ansible_user: cvpadmin
+          ansible_ssh_pass: cvp123!
+        DC1-LEAF1A:
+          ansible_host: 10.255.79.167
+          ansible_user: cvpadmin
+          ansible_ssh_pass: cvp123!
+        DC1-LEAF1B:
+          ansible_host: 10.255.118.254
+          ansible_user: cvpadmin
+          ansible_ssh_pass: cvp123!
+        DC1-LEAF2A:
+          ansible_host: 10.255.17.17
+          ansible_user: cvpadmin
+          ansible_ssh_pass: cvp123!
+        DC1-LEAF2B:
+          ansible_host: 10.255.114.77
+          ansible_user: cvpadmin
+          ansible_ssh_pass: cvp123!
+        DC1-SPINE1:
+          ansible_host: 10.255.100.183
+          ansible_user: cvpadmin
+          ansible_ssh_pass: cvp123!
+        DC1-SPINE2:
+          ansible_host: 10.255.43.12
+          ansible_user: cvpadmin
+          ansible_ssh_pass: cvp123!
+    GENERIC:
+      hosts:
+        Server01:
+          ansible_host: 10.255.18.12
+          ansible_user: ansible
+          ansible_ssh_pass: ansible
+        Server02:
+          ansible_host: 10.255.24.218
+          ansible_user: ansible
+          ansible_ssh_pass: ansible
